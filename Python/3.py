@@ -1,17 +1,10 @@
-def isPrime(n):
-	for x in xrange(2, int(n**0.5)+1):
-		if n % x == 0:
-			return False
-		return True
+n = 600851475143
+i = 3
 
-x = 2
-
-while x != 147:
-	if 147 % x == 0:
-		if isPrime( 147 / x):
-			print x
-			x = 147 / x
+while n > 1:
+	if n%i == 0:
+		n/=i
 	else:
-		x = x + 1
+		i+=2
 
-#print isPrime(10)
+print i
